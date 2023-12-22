@@ -4,6 +4,41 @@
 </div>
 <hr>
 <div class="sheet-grid-section">
+   <h2>Wounds</h2>
+   <div>
+      <select name="attr_wound_mod" style="background-color: yellow;">
+         <option value="3" selected="selected">0 - Healthy</option>
+         <option value="2">1 - Scratched</option>
+         <option value="3">0 - Scratched (Treated)</option>
+         <option value="2">X - Use MORTAL WOUNDS ➡➡➡ </option>
+      </select>
+      <select name="attr_mortal_mod" style="background-color: DarkRed; color: white;">
+         <option value="3" selected="selected">0 - Healthy</option>
+         <option value="4">3 - Near Death </option>
+         <option value="0">DEAD</option>
+      </select>
+   </div>
+   <h2>Stress</h2>
+   <div>
+      <select name="attr_stress_mod">
+         <option value="0" selected="selected">0 - Stable</option>
+         <option value="1">1 - Shook</option>
+         <option value="0">0 - Shook (Recovered)</option>
+         <option value="2">2 - Tired</option>
+         <option value="3">3 - Panicked</option>
+         <option value="100">X - KOed</option>
+      </select>
+   </div>
+   <h2>Pushes</h2>
+   <div>
+      <input type="checkbox" name="attr_PushesOne" value="1" >
+      <input type="checkbox" name="attr_PushesTwo" value="10" >
+      <input type="checkbox" name="attr_PushesThree" value="100" > 
+      <input type="checkbox" name="attr_PushesFour" value="1000" >   
+   </div>
+</div>
+<hr>
+<div class="sheet-grid-section">
    <div>
       <label>Body</label>
       <select name="attr_body_level">
@@ -58,40 +93,5 @@
       </select>
       <button type="roll" name="psychic_primary_roll" value="/roll @{wound_mod}@{psychic_level}kh2-@{stress_mod}" >Psychic Primary Roll</button>
       <button type="roll" name="psychic_2ndary_roll" value="/roll @{mortal_mod}@{psychic_level}kl2-@{stress_mod}" >Psychic Secondary Roll</button>
-   </div>
-</div>
-<hr>
-<div class="sheet-grid-section">
-   <h2>Wounds</h2>
-   <div>
-      <select name="attr_wound_mod" style="color: yellow;">
-         <option value="3" selected="selected">0 - Healthy</option>
-         <option value="2">1 - Scratched</option>
-         <option value="3">0 - Scratched (Treated)</option>
-         <option value="2">X - Use MORTAL WOUNDS ➡➡➡ </option>
-      </select>
-      <select name="attr_mortal_mod"  style="color: yellow;">
-         <option value="3" selected="selected">0 - Healthy</option>
-         <option value="4">3 - Near Death </option>
-         <option value="0">DEAD</option>
-      </select>
-   </div>
-   <h2>Stress</h2>
-   <div>
-      <select name="attr_stress_mod">
-         <option value="0" selected="selected">0 - Stable</option>
-         <option value="1">1 - Shook</option>
-         <option value="0">0 - Shook (Recovered)</option>
-         <option value="2">2 - Tired</option>
-         <option value="3">3 - Panicked</option>
-         <option value="100">X - KOed</option>
-      </select>
-   </div>
-   <h2>Pushes</h2>
-   <div>
-      <input type="checkbox" name="attr_PushesOne" value="1" >
-      <input type="checkbox" name="attr_PushesTwo" value="10" >
-      <input type="checkbox" name="attr_PushesThree" value="100" > 
-      <input type="checkbox" name="attr_PushesFour" value="1000" >   
    </div>
 </div>
