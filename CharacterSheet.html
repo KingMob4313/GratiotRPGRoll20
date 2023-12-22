@@ -12,8 +12,8 @@
          <option value="d10">d10</option>
          <option value="d12">d12</option>
       </select>
-      <button type="roll" name="body_primary_roll" value="/roll 3@{body_level}kh2" >Body Primary Roll</button>
-      <button type="roll" name="body_2ndary_roll" value="/roll 3@{body_level}kl2" >Body Secondary Roll</button>
+      <button type="roll" name="body_primary_roll" value="/roll @{wound_mod}@{body_level}kh2-@{stress_mod}" >Body Primary Roll</button>
+      <button type="roll" name="body_2ndary_roll" value="/roll @{mortal_mod}@{body_level}kl2-@{stress_mod}" >Body Secondary Roll</button>
    </div>
    <div>
       <label>Skill</label>
@@ -23,8 +23,8 @@
          <option value="d10">d10</option>
          <option value="d12">d12</option>
       </select>
-      <button type="roll" name="skill_primary_roll" value="/roll 3@{skill_level}kh2" >Skill Primary Roll</button>
-      <button type="roll" name="skill_2ndary_roll" value="/roll 3@{skill_level}kl2" >Skill Secondary Roll</button>
+      <button type="roll" name="skill_primary_roll" value="/roll @{wound_mod}@{skill_level}kh2-@{stress_mod}" >Skill Primary Roll</button>
+      <button type="roll" name="skill_2ndary_roll" value="/roll @{mortal_mod}@{skill_level}kl2-@{stress_mod}" >Skill Secondary Roll</button>
    </div>
    <div>
       <label>Tech</label>
@@ -34,8 +34,8 @@
          <option value="d10">d10</option>
          <option value="d12">d12</option>
       </select>
-      <button type="roll" name="tech_primary_roll" value="/roll 3@{tech_level}kh2" >Tech Primary Roll</button>
-      <button type="roll" name="tech_2ndary_roll" value="/roll 3@{tech_level}kl2" >Tech Secondary Roll</button>
+      <button type="roll" name="tech_primary_roll" value="/roll @{wound_mod}@{tech_level}kh2-@{stress_mod}" >Tech Primary Roll</button>
+      <button type="roll" name="tech_2ndary_roll" value="/roll @{mortal_mod}@{tech_level}kl2-@{stress_mod}" >Tech Secondary Roll</button>
    </div>
    <div>
       <label>Magic</label>
@@ -45,8 +45,8 @@
          <option value="d10">d10</option>
          <option value="d12">d12</option>
       </select>
-      <button type="roll" name="magic_primary_roll" value="/roll 3@{magic_level}kh2" >Magic Primary Roll</button>
-      <button type="roll" name="magic_2ndary_roll" value="/roll 3@{magic_level}kl2" >Magic Secondary Roll</button>
+      <button type="roll" name="magic_primary_roll" value="/roll @{wound_mod}@{magic_level}kh2-@{stress_mod}" >Magic Primary Roll</button>
+      <button type="roll" name="magic_2ndary_roll" value="/roll @{mortal_mod}@{magic_level}kl2-@{stress_mod}" >Magic Secondary Roll</button>
    </div>
    <div>
       <label>Psychic</label>
@@ -56,24 +56,36 @@
          <option value="d10">d10</option>
          <option value="d12">d12</option>
       </select>
-      <button type="roll" name="psychic_primary_roll" value="/roll 3@{psychic_level}kh2" >Psychic Primary Roll</button>
-      <button type="roll" name="psychic_2ndary_roll" value="/roll 3@{psychic_level}kl2" >Psychic Secondary Roll</button>
+      <button type="roll" name="psychic_primary_roll" value="/roll @{wound_mod}@{psychic_level}kh2-@{stress_mod}" >Psychic Primary Roll</button>
+      <button type="roll" name="psychic_2ndary_roll" value="/roll @{mortal_mod}@{psychic_level}kl2-@{stress_mod}" >Psychic Secondary Roll</button>
    </div>
 </div>
 <hr>
 <div class="sheet-grid-section">
    <h2>Wounds</h2>
    <div>
-      <input type="checkbox" name="attr_WoundMod" value="2" >
-      <input type="checkbox" name="attr_WoundMod" value="10" >
-      <input type="checkbox" name="attr_WoundMod" value="100" > 
-      <input type="checkbox" name="attr_WoundMod" value="1000" >   
+      <select name="attr_wound_mod" style="color: yellow;">
+         <option value="3" selected="selected">0 - Healthy</option>
+         <option value="2">1 - Scratched</option>
+         <option value="3">0 - Scratched (Treated)</option>
+         <option value="2">X - Use MORTAL WOUNDS ➡➡➡ </option>
+      </select>
+      <select name="attr_mortal_mod"  style="color: yellow;">
+         <option value="3" selected="selected">0 - Healthy</option>
+         <option value="4">3 - Near Death </option>
+         <option value="0">DEAD</option>
+      </select>
    </div>
    <h2>Stress</h2>
    <div>
-      <input type="checkbox" name="attr_StressMod" value="1" >
-      <input type="checkbox" name="attr_StressMod" value="2" >
-      <input type="checkbox" name="attr_StressMod" value="3" > 
+      <select name="attr_stress_mod">
+         <option value="0" selected="selected">0 - Stable</option>
+         <option value="1">1 - Shook</option>
+         <option value="0">0 - Shook (Recovered)</option>
+         <option value="2">2 - Tired</option>
+         <option value="3">3 - Panicked</option>
+         <option value="100">X - KOed</option>
+      </select>
    </div>
    <h2>Pushes</h2>
    <div>
