@@ -1,0 +1,86 @@
+<div class="sheet-grid-section">
+   <label>Character Name: </label><input type="Text" name="attr_character_name">
+   <label>Character Concept: </label><input type="Text" name="attr_character_concept">
+</div>
+<hr>
+<div class="sheet-grid-section">
+   <div>
+      <label>Body</label>
+      <select name="attr_body_level">
+         <option value="d6" selected="selected">d6</option>
+         <option value="d8">d8</option>
+         <option value="d10">d10</option>
+         <option value="d12">d12</option>
+      </select>
+      <button type="roll" name="body_primary_roll" value="/roll 3@{body_level}kh2" >Body Primary Roll</button>
+      <button type="roll" name="body_2ndary_roll" value="/roll 3@{body_level}kl2" >Body Secondary Roll</button>
+   </div>
+   <div>
+      <label>Skill</label>
+      <select name="attr_skill_level">
+         <option value="d6" selected="selected">d6</option>
+         <option value="d8">d8</option>
+         <option value="d10">d10</option>
+         <option value="d12">d12</option>
+      </select>
+      <button type="roll" name="skill_primary_roll" value="/roll 3@{skill_level}kh2" >Skill Primary Roll</button>
+      <button type="roll" name="skill_2ndary_roll" value="/roll 3@{skill_level}kl2" >Skill Secondary Roll</button>
+   </div>
+   <div>
+      <label>Tech</label>
+      <select name="attr_tech_level">
+         <option value="d6" selected="selected">d6</option>
+         <option value="d8">d8</option>
+         <option value="d10">d10</option>
+         <option value="d12">d12</option>
+      </select>
+      <button type="roll" name="tech_primary_roll" value="/roll 3@{tech_level}kh2" >Tech Primary Roll</button>
+      <button type="roll" name="tech_2ndary_roll" value="/roll 3@{tech_level}kl2" >Tech Secondary Roll</button>
+   </div>
+   <div>
+      <label>Magic</label>
+      <select name="attr_magic_level">
+         <option value="d6" selected="selected">d6</option>
+         <option value="d8">d8</option>
+         <option value="d10">d10</option>
+         <option value="d12">d12</option>
+      </select>
+      <button type="roll" name="magic_primary_roll" value="/roll 3@{magic_level}kh2" >Magic Primary Roll</button>
+      <button type="roll" name="magic_2ndary_roll" value="/roll 3@{magic_level}kl2" >Magic Secondary Roll</button>
+   </div>
+   <div>
+      <label>Psychic</label>
+      <select name="attr_psychic_level">
+         <option value="d6" selected="selected">d6</option>
+         <option value="d8">d8</option>
+         <option value="d10">d10</option>
+         <option value="d12">d12</option>
+      </select>
+      <button type="roll" name="psychic_primary_roll" value="/roll 3@{psychic_level}kh2" >Psychic Primary Roll</button>
+      <button type="roll" name="psychic_2ndary_roll" value="/roll 3@{psychic_level}kl2" >Psychic Secondary Roll</button>
+   </div>
+</div>
+<hr>
+<div class="sheet-grid-section">
+   <h2>Wounds</h2>
+   <div>
+      <input type="checkbox" name="attr_WoundOne" value="1" >
+      <input type="checkbox" name="attr_WoundTwo" value="10" >
+      <input type="checkbox" name="attr_WoundThree" value="100" > 
+      <input type="checkbox" name="attr_WoundFour" value="1000" >   
+   </div>
+   <h2>Stress</h2>
+   <div>
+      <input type="checkbox" name="attr_StressOne" value="1" >
+      <input type="checkbox" name="attr_StressTwo" value="10" >
+      <input type="checkbox" name="attr_StressThree" value="100" > 
+      <input type="checkbox" name="attr_StressFour" value="1000" >   
+   </div>
+   <h2>Pushes</h2>
+   <div>
+      <input type="checkbox" name="attr_PushesOne" value="1" >
+      <input type="checkbox" name="attr_PushesTwo" value="10" >
+      <input type="checkbox" name="attr_PushesThree" value="100" > 
+      <input type="checkbox" name="attr_PushesFour" value="1000" >   
+   </div>
+</div>
